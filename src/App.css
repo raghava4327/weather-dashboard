@@ -1,0 +1,203 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Jaldi', sans-serif;
+}
+.leaflet-container{ 
+  height: 50vh; 
+width:50%;
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding:10px;
+}
+input[type=text]{
+  padding: 10px 100px;
+  border-radius:10px;
+}
+.navbar-icons{
+  display:flex;
+  align-items: center;
+  gap:10px;
+}
+.weather-grid{
+  display:grid;
+  grid-template-areas: "weather-card  views"
+            "weather-details overview"
+            "rainfall  overview"
+            "temperature overview"
+            "footer footer";
+
+  /* height: 800px; */
+  grid-gap:30px;
+  margin:0 10px;
+}
+/* Weather */
+.weather-card{
+  box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.5);
+  grid-area: weather-card;
+  padding:20px;
+  border-radius: 30px;
+  background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("assets/digital-illustration-brian-edward-miller-17.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:top center ;
+  display:grid;
+  color:white;
+  grid-template:repeat(2,1fr)/repeat(2,1fr);
+}
+h1{
+  padding:0;
+  margin:0;
+}
+.today-temp{
+  font-size: 4rem;
+  align-self:first baseline;
+  justify-self: start;
+  
+}
+.weather-img{
+  width:80px;
+  justify-self: end;
+  align-self:baseline;
+}
+.location{
+  font-size: 1.25rem;
+  align-self: end;
+}
+.time{
+  font-size: 1.25rem;
+  justify-self: end;
+  align-self: end;
+}
+/* ------------- */
+.views{
+  grid-area: views;
+  text-align: center;
+  /* justify-self: center;
+  align-self: center; */
+}
+.views p{
+
+   border:1px solid rgba(0,0,0,0.4);
+}
+.view-heading{
+  font-weight: bolder;
+}
+.view-subheads{
+ 
+  text-align:center;
+  border-radius:5px;
+  padding:10px;
+  margin:30px 0; 
+  box-shadow:0px 0px 5px 1px rgba(0,0,0,0.2);
+}
+
+/* --------------------------- */
+.weather-details{
+  margin-top:10px;
+  grid-area:weather-details;
+  box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.5);
+  display:grid;
+  grid-template: repeat(2,1fr)/repeat(2,1fr);
+  border-radius: 10px;
+  
+  
+}
+.each-weather-detail-card{
+  display:flex;
+  margin:10px 30px;
+  gap:30px;
+  align-self:center;
+  justify-self:start;
+}
+.each-weather-detail-card img{
+  width:80px;
+}
+/* ---------------------------- */
+.overview{
+  grid-area:overview;
+  box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.5);
+  padding:30px;
+  border-radius: 30px;
+  background:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.4),rgba(0,0,0,0.9)), url("assets/digital-illustration-brian-edward-miller.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  color:white;
+  
+}
+.overview-head{
+  text-align:center;
+}
+.overview-content{
+  height:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .overview-card{
+  display:flex;
+  text-align: center;
+}
+.each-card{
+  border:1px solid rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding:20px;
+} */
+/* ----------------------------- */
+.some-weather-conditions{
+  grid-area:rainfall;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding:10px 50px
+}
+ .some-weather-conditions img{
+  width:80px;
+}
+.temperature{
+  grid-area:temperature;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+  
+}
+.temperature img{
+  width:80px;
+}
+.some-weather-conditions,.temperature{
+  box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.5);
+  border-radius: 10px;
+  padding:20px;
+ 
+}
+.footer{
+  padding:30px;
+  text-align: center;
+  grid-area: footer;
+}
+@media (max-width:800px) {
+  .navbar{
+    flex-direction: column;
+  }
+  .weather-grid{
+    display:grid;
+    grid-template-areas: "weather-card""views"
+              "weather-details""overview"
+              "rainfall"
+              "temperature"
+              "footer";
+  
+    /* height: 800px; */
+    grid-gap:30px;
+    margin:0 20px;
+  }
+}
