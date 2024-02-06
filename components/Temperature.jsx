@@ -10,7 +10,7 @@ export default function Temperature(){
     <h3>Today's max Temperature</h3>
     <p>{weatherVal.main.temp_max}°C</p>
     </div>
-    <img src="../src/assets/cold.gif" alt="" />
+    <img src="../src/assets/cold.png" alt="" />
     <div>
     <h3>Today's min Temperature</h3>
     <p>{weatherVal.main.temp_min}°C</p>
