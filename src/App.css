@@ -114,6 +114,7 @@ h1{
   display:flex;
   margin:10px 30px;
   gap:30px;
+  flex-wrap:wrap;
   align-self:center;
   justify-self:start;
 }
@@ -157,7 +158,8 @@ h1{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding:10px 50px
+  padding:10px 50px;
+  flex-wrap:wrap;
 }
  .some-weather-conditions img{
   width:80px;
@@ -165,6 +167,7 @@ h1{
 .temperature{
   grid-area:temperature;
   display:flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap:20px;
@@ -199,5 +202,8 @@ h1{
     /* height: 800px; */
     grid-gap:30px;
     margin:0 20px;
+  }
+  .some-weather-conditions{
+    
   }
 }
