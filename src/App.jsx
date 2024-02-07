@@ -19,7 +19,7 @@ function App() {
   React.useEffect(()=>{
     if(place)
     {
-      fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${place}&appid=ce71b9d8c5255de8b809b827c004c3f6`)
+      fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${place}&appid=ce71b9d8c5255de8b809b827c004c3f6`)
       .then(res=> res.json())
       .then(data=>{
         setLocation({lat:data[0].lat,lon:data[0].lon})
