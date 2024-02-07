@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-  const notify = () => toast.error("No location found !");
+  const notify = (message) => toast.error(message);
   const [location,setLocation]=React.useState({})
   const[place,setPlace] = React.useState("")
   function Location(ans){
@@ -25,13 +25,16 @@ function App() {
       
     })
     .catch(()=>{
-      notify()
+      notify("no location found")
     })
     
   }
     else{
       navigator.geolocation.getCurrentPosition((position)=>{
-        setLocation({lat:position.coords.latitude,lon:position.coords.longitude}  )
+        setLocation({lat:position.coords.latitude,lon:position.coords.longitude})
+        
+      },(err)=>{
+        notify(err.message +"\nplease enable it")
       })
     }
    },[place])
@@ -42,7 +45,8 @@ function App() {
         closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light"/>
     <Navbar Location={Location} clear={clear}/>
     <WeatherReports lat ={location.lat} lon={location.lon}/>
-    </>:<p>Loading</p>
+    </>:<ToastContainer position="top-center" autoClose={5000} hideProgressBar={false} newestOnTop={false}
+        closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light"/>
   )
 }
 
