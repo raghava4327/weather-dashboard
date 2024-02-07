@@ -8,7 +8,7 @@ export default function Overview(){
       <h2 className="overview-head">Weather Overview</h2>
       <div className="overview-content">
       <h1>Feels like {weatherVal.main.feels_like}°C and {weatherVal.weather[0].description}</h1>
-      <p>{weatherAdvice[weatherVal.weather[0].description]["for all people"]}</p>
+      <p>{weatherAdvice[weatherVal.weather[0].main]["for all people"]}</p>
       </div>
       </div>
   )

@@ -9,15 +9,15 @@ export default function Views(){
           <h2 className="view-heading">Today tips for viewer's</h2>
           <details className="view-subheads">
             <summary>Event planners</summary>
-            <p className="subheads-answers">{weatherAdvice[weatherVal.weather[0].description]["event planners"]}</p>
+            <p className="subheads-answers">{weatherAdvice[weatherVal.weather[0].main]["event planners"]}</p>
             </details>
           <details className="view-subheads">
             <summary>Agricultural insights</summary>
-            <p className="subheads-answers">{weatherAdvice[weatherVal.weather[0].description]["agricultural insights"]}</p>
+            <p className="subheads-answers">{weatherAdvice[weatherVal.weather[0].main]["agricultural insights"]}</p>
             </details>
           <details className="view-subheads">
             <summary>Travel weather planner</summary>
-            <p className="subheads-answers">{weatherAdvice[weatherVal.weather[0].description]["travel planners"]}</p>
+            <p className="subheads-answers">{weatherAdvice[weatherVal.weather[0].main]["travel planners"]}</p>
             </details>
           
           

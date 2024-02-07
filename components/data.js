@@ -1,58 +1,96 @@
 export const weatherAdvice = {
-  "clear sky": {
-    "travel planners": "Great day for outdoor activities and sightseeing.",
-    "agricultural insights": "Ideal conditions for harvesting and sowing.",
-    "event planners": "Perfect weather for outdoor events and gatherings.",
-    "for all people": "Enjoy the sunny day outside! A perfect day for a walk or picnic."
+  "Clear": {
+    "travel planners": "Ideal conditions for any travel or outdoor activities.",
+    "agricultural insights": "Good day for fieldwork and other agricultural activities.",
+    "event planners": "Perfect conditions for outdoor events.",
+    "for all people": "Clear skies ahead! Enjoy the sunshine and great outdoors."
   },
-  "few clouds": {
-    "travel planners": "Good weather for travel; light cloud cover might make for cooler conditions.",
-    "agricultural insights": "Beneficial for most crops; reduces the risk of sun scorch.",
-    "event planners": "Favorable conditions for both indoor and outdoor events.",
-    "for all people": "A beautiful day with a pleasant mix of sun and clouds. Ideal for being outdoors."
+  "Clouds": {
+    "travel planners": "Generally good conditions for travel, though overcast.",
+    "agricultural insights": "Cloudy skies can benefit certain crops, reducing stress from direct sunlight.",
+    "event planners": "Cloud cover shouldn't deter outdoor plans, but always have a backup.",
+    "for all people": "A bit cloudy but still a fine day to be outside."
   },
-  "scattered clouds": {
-    "travel planners": "Slightly overcast but suitable for travel and outdoor activities.",
-    "agricultural insights": "Moderate sunlight can help with the growth of certain crops.",
-    "event planners": "Minimal impact on outdoor activities; events can proceed as planned.",
-    "for all people": "A nice day with scattered clouds, perfect for outdoor activities requiring less direct sunlight."
+  "Tornado": {
+    "travel planners": "Cancel or postpone travel; prioritize safety and monitor updates.",
+    "agricultural insights": "Severe risk to crops and structures; ensure safety measures are in place.",
+    "event planners": "Events should be rescheduled. Safety is the priority.",
+    "for all people": "Take immediate shelter and stay informed on weather advisories."
   },
-  "broken clouds": {
-    "travel planners": "Check for possible changes in weather but generally good for outings.",
-    "agricultural insights": "Irregular sunlight exposure; monitor crops that are sensitive to light changes.",
-    "event planners": "Consider contingency plans for outdoor events; weather might shift.",
-    "for all people": "Variable cloud cover; keep an eye on the sky, but don't cancel your plans yet."
+  "Squall": {
+    "travel planners": "Expect sudden, strong winds. Travel might be disrupted.",
+    "agricultural insights": "Potential for crop damage. Secure any loose objects.",
+    "event planners": "Outdoor events may need to be postponed or moved indoors.",
+    "for all people": "Be prepared for sudden gusts. It's best to stay indoors if possible."
   },
-  "shower rain": {
-    "travel planners": "Expect brief interruptions in outdoor activities; carry rain gear.",
-    "agricultural insights": "Good for most crops, especially in dry conditions.",
-    "event planners": "Ensure outdoor events have adequate shelter or indoor alternatives.",
-    "for all people": "Intermittent rain showers expected. A good day to have an umbrella handy."
+  "Ash": {
+    "travel planners": "Travel could be hazardous. Check for flight cancellations and road closures.",
+    "agricultural insights": "Ashfall can harm crops. Consider protective coverings if possible.",
+    "event planners": "Consider the health impact on attendees and possibly cancel or move events indoors.",
+    "for all people": "Stay indoors and use masks if going outside to avoid inhaling ash."
   },
-  "rain": {
-    "travel planners": "Plan for indoor activities or delays in travel schedules.",
-    "agricultural insights": "Beneficial for water-intensive crops but monitor for flooding.",
-    "event planners": "Prefer indoor venues for events; outdoor plans may need rescheduling.",
-    "for all people": "Steady rain throughout the day. A perfect time for indoor activities or a relaxing day at home."
+  "Dust": {
+    "travel planners": "Reduced visibility might affect travel plans. Proceed with caution.",
+    "agricultural insights": "Dust can affect crop health. Water more frequently if needed.",
+    "event planners": "Outdoor events may not be enjoyable. Consider air quality and visibility.",
+    "for all people": "Avoid prolonged exposure to dusty conditions. Wear protective gear if outside."
   },
-  "thunderstorm": {
-    "travel planners": "Avoid outdoor activities; seek shelter and monitor weather updates.",
-    "agricultural insights": "Risk of crop damage; ensure proper drainage and protection measures.",
-    "event planners": "Postpone outdoor events; prioritize safety with severe weather warnings.",
-    "for all people": "Severe weather with thunderstorms. Stay indoors and ensure safety until the storm passes."
+  "Sand": {
+    "travel planners": "Similar to dust storms, expect reduced visibility and potential delays.",
+    "agricultural insights": "Sand can damage young plants. Provide barriers or coverage.",
+    "event planners": "Not ideal for outdoor activities. Reschedule or plan for indoor alternatives.",
+    "for all people": "Stay inside to avoid sandstorms, and protect your eyes and lungs if outside."
   },
-  "snow": {
-    "travel planners": "Check road conditions and airport delays; winter sports are an option.",
-    "agricultural insights": "Protect sensitive plants; snow can insulate crops against freezing.",
-    "event planners": "Winter-themed events are attractive; ensure attendees can travel safely.",
-    "for all people": "Snowfall expected. Dress warmly and be prepared for potential travel delays."
+  "Fog": {
+    "travel planners": "Significantly reduced visibility. Travel with caution and plan for delays.",
+    "agricultural insights": "Little impact on crops, but can affect working conditions.",
+    "event planners": "Fog can create atmospheric events but may impact attendees' travel.",
+    "for all people": "Drive carefully in foggy conditions and use fog lights if available."
   },
-  "mist": {
-    "travel planners": "Reduced visibility may affect travel; drive carefully.",
-    "agricultural insights": "Little to no impact on crops; monitor for prolonged humidity conditions.",
-    "event planners": "Misty conditions can add ambiance to events but consider attendee comfort.",
-    "for all people": "Misty conditions may reduce visibility. Take care if you need to travel and enjoy the ethereal beauty if you can."
+  "Haze": {
+    "travel planners": "Reduced air quality may affect some travelers. Keep windows closed.",
+    "agricultural insights": "Monitor crops for signs of stress due to poor air quality.",
+    "event planners": "Outdoor events might be less pleasant. Consider the health of attendees.",
+    "for all people": "Limit outdoor activities and wear masks if necessary due to poor air quality."
+  },
+  "Smoke": {
+    "travel planners": "Check for wildfires nearby and plan travel routes accordingly.",
+    "agricultural insights": "Smoke can stress plants and animals. Provide adequate ventilation if indoors.",
+    "event planners": "Reschedule outdoor events to ensure the safety and comfort of participants.",
+    "for all people": "Stay indoors to avoid smoke inhalation, especially if you have respiratory issues."
+  },
+  "Mist": {
+    "travel planners": "Mild visibility reduction. Proceed with caution, especially when driving.",
+    "agricultural insights": "Minimal impact, though it can help with watering plants.",
+    "event planners": "Mist can add a mystical touch to events, though visibility may be reduced.",
+    "for all people": "Enjoy the mystical ambiance outdoors, but be cautious on the roads."
+  },
+  "Snow": {
+    "travel planners": "Expect delays and closures. Check conditions before traveling.",
+    "agricultural insights": "Protect sensitive plants. Snow can insulate but also smother.",
+    "event planners": "Snow can create a winter wonderland but plan for guest safety and mobility.",
+    "for all people": "Dress warmly and be prepared for potential travel delays."
+  },
+  "Rain": {
+    "travel planners": "Watch for delays and wet roads. Plan indoor activities.",
+    "agricultural insights": "Generally beneficial, but watch for excessive rain that could lead to flooding.",
+    "event planners": "Have a backup plan for outdoor events. Consider the comfort of attendees.",
+    "for all people": "Grab your umbrella and enjoy the sound of rain, or stay cozy indoors."
+  },
+  "Drizzle": {
+    "travel planners": "Minor inconvenience, but keep an eye on the weather for changes.",
+    "agricultural insights": "Light moisture can be beneficial for plants, especially in dry conditions.",
+    "event planners": "Outdoor events can proceed, but provide cover for guests just in case.",
+    "for all people": "A light drizzle can be refreshing. A good day for a walk with a waterproof jacket."
+  },
+  "Thunderstorm": {
+    "travel planners": "Avoid outdoor activities. Seek shelter and monitor weather updates.",
+    "agricultural insights": "Risk of damage to crops and property. Ensure proper drainage and protection.",
+    "event planners": "Prioritize safety. Postpone or move outdoor events indoors.",
+    "for all people": "Stay indoors and away from windows. Enjoy the show from a safe distance."
   }
 };
 
-
+// Example usage
+console.log(weatherAdvice["Clear"]["for all people"]);
+// Output: Clear skies ahead! Enjoy the sunshine and great outdoors.
