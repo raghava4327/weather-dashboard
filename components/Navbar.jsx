@@ -3,11 +3,11 @@ export default function Navbar({Location,clear}) {
   const [formData, setFormData] = React.useState("");
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(formData)
+    
     Location(formData.searchLocation)
   }
   function handleChange(e) {
-    console.log(formData);
+
     setFormData({ [e.target.name]: e.target.value });
   }
   return (

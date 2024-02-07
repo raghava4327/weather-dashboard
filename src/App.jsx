@@ -1,14 +1,14 @@
 import React from 'react'
 import Navbar from "../components/Navbar"
 import WeatherReports from "../components/WeatherReports"
-import Toast from "../components/Toast"
 import './App.css'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
+  const notify = () => toast.error("No location found !");
   const [location,setLocation]=React.useState({})
   const[place,setPlace] = React.useState("")
-  const [toastMessage, setToastMessage] = React.useState('');
-
   function Location(ans){
     setPlace(ans)
   }
@@ -24,12 +24,8 @@ function App() {
         setLocation({lat:data[0].lat,lon:data[0].lon})
       
     })
-    .catch((error)=>{
-      console.error('Fetching error: ', error);
-      setToastMessage(`No Location found`);
-      setTimeout(() => {
-        setToastMessage(''); 
-      }, 5000);
+    .catch(()=>{
+      notify()
     })
     
   }
@@ -42,7 +38,8 @@ function App() {
   return (
   Object.keys(location).length?
     <>
-     <Toast message={toastMessage} duration={10000} />
+    <ToastContainer position="top-center" autoClose={5000} hideProgressBar={false} newestOnTop={false}
+        closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light"/>
     <Navbar Location={Location} clear={clear}/>
     <WeatherReports lat ={location.lat} lon={location.lon}/>
     </>:<p>Loading</p>

@@ -9,7 +9,6 @@ export default function CountryList({con}){
   ,[])
   return(
     <>
-    {country&&console.log(country[con])}
     {country?country[con]:"Loading"}
     </>
   )
