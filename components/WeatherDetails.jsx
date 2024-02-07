@@ -7,11 +7,14 @@ import pressure from "../src/assets/32/Color=On-6.svg"
 import {Theme} from "./WeatherReports"
 export default function WeatherDetails(){
   const weatherVal=React.useContext(Theme)
+  function getTime(time){
+    let date=new Date(time*1000+(weatherVal.timezone*1000))
+    return `${date.getUTCHours()}:${date.getUTCMinutes()}:${date.getUTCSeconds()}`
+  }
   return(
     <div className="weather-details">
-      <WeatherDetailsCards image={sunrise} details={new Date(weatherVal.sys.sunrise*1000+(weatherVal.timezone*1000)).toUTCString()}>Sunrise</WeatherDetailsCards>
-      <WeatherDetailsCards image={sunset} details={new Date(weatherVal.sys.sunset*1000+(weatherVal.timezone*1000)).toUTCString()}>Sunset</WeatherDetailsCards>
-      
+      <WeatherDetailsCards image={sunrise} details={getTime(weatherVal.sys.sunrise)+" AM"}>Sunrise</WeatherDetailsCards>
+      <WeatherDetailsCards image={sunset} details={getTime(weatherVal.sys.sunset)+" PM"}>Sunset</WeatherDetailsCards>
       <WeatherDetailsCards image={humidity} details={`${weatherVal.main.humidity}%`}>Humidity</WeatherDetailsCards>
       <WeatherDetailsCards image={pressure} details={`${weatherVal.main.pressure} hPa`}>Pressure</WeatherDetailsCards>
       </div>

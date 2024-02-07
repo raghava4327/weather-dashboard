@@ -9,22 +9,28 @@ export default function Rainfall(){
   return(
     
     <div className="some-weather-conditions">
+      <div className="each-card-rainfall">
     <img src= {rain}/>
       <div>
     <h2>Rainfall</h2>
     {weatherVal.rain?weatherVal.rain:<p>no rain today</p>}
     </div>
+    </div>
+    <div className="each-card-rainfall">
     <img src= {snow}/>
-      <div>
+      <div >
     <h2>Snow</h2>
     {weatherVal.rain?weatherVal.rain:<p>no snow today</p>}
     </div>
+    </div>
+    <div className="each-card-rainfall">
     <img src={wind} />
       <div>
     <h2>Wind</h2>
     <p>wind speed : {weatherVal.wind.speed} meter/sec</p>
     <p>wind direction : {weatherVal.wind.deg}°</p>
     <p>wind gust : {weatherVal.wind.gust} meter/sec</p>
+    </div>
     </div>
     </div>
   )
