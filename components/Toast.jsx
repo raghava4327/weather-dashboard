@@ -6,12 +6,16 @@ const Toast = ({ message, duration }) => {
   const Style = {
     position: "fixed",
     top: "10px",
-    right: "35%",
+    left: "50%",
+    fontSize:"1.25rem",
+    fontWeight:"bold",
+  transform: "translateX(-50%)",
     background: "#FEF2F2",
     color: "",
     padding: "20px",
     width:"300px",
-    border:"1px solid #92400E",
+    // border:"1px solid #92400E",
+    boxShadow: "rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset",
     borderRadius: "5px",
     zIndex: "1",
 

@@ -15,7 +15,6 @@ function App() {
   function clear(){
     setPlace("")
   }
- console.log(place)
   React.useEffect(()=>{
     if(place)
     {
@@ -29,7 +28,7 @@ function App() {
       console.error('Fetching error: ', error);
       setToastMessage(`No Location found`);
       setTimeout(() => {
-        setToastMessage(''); // Clear the message after the duration to hide the toast
+        setToastMessage(''); 
       }, 5000);
     })
     
@@ -43,7 +42,7 @@ function App() {
   return (
   Object.keys(location).length?
     <>
-     <Toast message={toastMessage} duration={5000} />
+     <Toast message={toastMessage} duration={10000} />
     <Navbar Location={Location} clear={clear}/>
     <WeatherReports lat ={location.lat} lon={location.lon}/>
     </>:<p>Loading</p>
