@@ -13,8 +13,8 @@ export default function WeatherDetails(){
   }
   return(
     <div className="weather-details">
-      <WeatherDetailsCards image={sunrise} details={getTime(weatherVal.sys.sunrise)+" AM"}>Sunrise</WeatherDetailsCards>
-      <WeatherDetailsCards image={sunset} details={getTime(weatherVal.sys.sunset)+" PM"}>Sunset</WeatherDetailsCards>
+      <WeatherDetailsCards image={sunrise} details={getTime(weatherVal.sys.sunrise)}>Sunrise</WeatherDetailsCards>
+      <WeatherDetailsCards image={sunset} details={getTime(weatherVal.sys.sunset)}>Sunset</WeatherDetailsCards>
       <WeatherDetailsCards image={humidity} details={`${weatherVal.main.humidity}%`}>Humidity</WeatherDetailsCards>
       <WeatherDetailsCards image={pressure} details={`${weatherVal.main.pressure} hPa`}>Pressure</WeatherDetailsCards>
       </div>
