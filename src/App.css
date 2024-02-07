@@ -7,7 +7,6 @@
 body{
   font-family: 'Jaldi', sans-serif;
 }
-
 .navbar{
   display: flex;
   align-items: center;
@@ -76,14 +75,13 @@ input[type="text"]{
             "rainfall  overview"
             "temperature overview"
             "footer footer";
-
-  /* height: 800px; */
   grid-gap:30px;
   margin:0 10px;
 }
 /* Weather */
 .weather-card{
   box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.5);
+  text-shadow: 10px 10px 20px black;
   grid-area: weather-card;
   padding:20px;
   border-radius: 30px;
@@ -123,25 +121,26 @@ h1{
 .views{
   grid-area: views;
   text-align: center;
-  /* justify-self: center;
-  align-self: center; */
-}
-.views p{
-
-   border:1px solid rgba(0,0,0,0.4);
 }
 .view-heading{
   font-weight: bolder;
 }
 .view-subheads{
- 
   text-align:center;
+  
   border-radius:5px;
   padding:10px;
   margin:30px 0; 
   box-shadow:0px 0px 5px 1px rgba(0,0,0,0.2);
 }
-
+.view-subheads summary{
+  font-weight:bold;
+  font-size:1.25rem;
+}
+.subheads-answers{
+  border:none;
+  font-size:1.25rem;
+}
 /* --------------------------- */
 .weather-details{
   margin-top:10px;
@@ -170,19 +169,23 @@ h1{
   box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.5);
   padding:30px;
   border-radius: 30px;
-  background:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.4),rgba(0,0,0,0.9)), url("assets/digital-illustration-brian-edward-miller.jpg");
+  background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7),rgba(0,0,0,0.5)), url("assets/digital-illustration-brian-edward-miller.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
   color:white;
+  text-shadow: 10px 10px 20px black;
   
 }
 .overview-head{
   text-align:center;
+  
+  font-size:2rem;
 }
 .overview-content{
-  height:100%;
+  height:80%;
   display:flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -202,6 +205,7 @@ h1{
 .each-card-rainfall{
   display: flex;
 }
+/* -------------------------------- */
 .temperature{
   grid-area:temperature;
   display:flex;
@@ -223,10 +227,12 @@ h1{
   padding:20px;
  
 }
+/* ----------------------------- */
 .footer{
   padding:30px;
   text-align: center;
   grid-area: footer;
+  font-size:1.25rem;
 }
 @media (max-width:850px) {
   .navbar{
@@ -247,9 +253,6 @@ h1{
   }
   .or{
     display:block;
-  }
-  .some-weather-conditions{
-    
   }
 }
 @media(max-width:450px){
