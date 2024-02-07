@@ -9,7 +9,7 @@ export default function WeatherDetails(){
   const weatherVal=React.useContext(Theme)
   function getTime(time){
     let date=new Date(time*1000+(weatherVal.timezone*1000))
-    return `${date.getUTCHours()}:${date.getUTCMinutes()}:${date.getUTCSeconds()}`
+    return `${date.getUTCHours()}:${date.getUTCMinutes()}`
   }
   return(
     <div className="weather-details">
