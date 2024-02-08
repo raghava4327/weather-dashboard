@@ -13,14 +13,14 @@ export default function Rainfall(){
     <img src= {rain}/>
       <div>
     <h2>Rainfall</h2>
-    {weatherVal.rain?weatherVal.rain:<p>no rain today</p>}
+    {weatherVal.rain?<p>Rain(for 1h) : {weatherVal.rain["1h"]} mm</p>:<p>no rain today</p>}
     </div>
     </div>
     <div className="each-card-rainfall">
     <img src= {snow}/>
       <div >
     <h2>Snow</h2>
-    {weatherVal.rain?weatherVal.rain:<p>no snow today</p>}
+    {weatherVal.snow?<p>Snow(for 1h) : {weatherVal.snow["1h"]} mm  </p>:<p>no snow today</p>}
     </div>
     </div>
     <div className="each-card-rainfall">
